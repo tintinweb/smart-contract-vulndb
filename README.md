@@ -11,14 +11,16 @@ An open dataset of publicly available smart contract issues aggregated from vari
 
 ## 🔸 DataSet
 
-[<img width="760" alt="image" src="https://github.com/tintinweb/smart-contract-vulndb/assets/2865694/78533545-fb72-4258-bfb9-31366fd05e8e">](https://github.com/tintinweb/smart-contract-vulndb/blob/main/public/cache/vulns.json)
+
+
+[<img width="760" alt="image" src="https://github.com/tintinweb/smart-contract-vulndb/assets/2865694/1b33870e-4201-43c9-b967-cf82498b5b48">](https://github.com/tintinweb/smart-contract-vulndb/blob/main/public/cache/vulns.json)
 
 
 * [vulns.json](public/cache/vulns.json)
 
 ## 🔸 Live Demo 
 
-[<img width="941" alt="image" src="https://github.com/tintinweb/smart-contract-vulndb/assets/2865694/8c875b6b-abbe-4c22-b0fb-696d3670ab00">](https://tintinweb.github.io/smart-contract-vulndb/)
+[<img width="941" alt="image" src="https://github.com/tintinweb/smart-contract-vulndb/assets/2865694/bf9cdd59-d415-438c-9c9b-95b7f01d3d62">](https://tintinweb.github.io/smart-contract-vulndb/)
 
 * [Demo](https://tintinweb.github.io/smart-contract-vulndb/)
 
