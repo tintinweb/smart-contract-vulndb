@@ -13,11 +13,14 @@ An open dataset of publicly available smart contract issues aggregated from vari
 
 [<img width="760" alt="image" src="https://github.com/tintinweb/smart-contract-vulndb/assets/2865694/78533545-fb72-4258-bfb9-31366fd05e8e">](https://github.com/tintinweb/smart-contract-vulndb/blob/main/public/cache/vulns.json)
 
+
+* [vulns.json](public/cache/vulns.json)
+
 ## 🔸 Live Demo 
 
 [<img width="941" alt="image" src="https://github.com/tintinweb/smart-contract-vulndb/assets/2865694/8c875b6b-abbe-4c22-b0fb-696d3670ab00">](https://tintinweb.github.io/smart-contract-vulndb/)
 
-https://tintinweb.github.io/smart-contract-vulndb/
+* [Demo](https://tintinweb.github.io/smart-contract-vulndb/)
 
 ## 🔸 Accessing the Latest Snapshot
 
@@ -54,5 +57,4 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
 
