@@ -14,7 +14,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          <a href="https://onedb.org">Smart Contract VulnDb</a>
+          <a href="https://tintinweb.github.io/smart-contract-vulndb">Smart Contract VulnDb</a>
         </h1>
 
         <Search></Search>
@@ -27,16 +27,8 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+
+           <a href="https://github.com/tintinweb">Built with ❤️ by @tintinweb</a>
       </footer>
     </div>
   )
