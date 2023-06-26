@@ -6,7 +6,7 @@
 
 # Smart Contract VulnDB
 
-An open dataset of publicly available smart contract issues aggregated from various audit reports. The dataset can be accessed at 🌻 [vulns.json](public/cache/vulns.json), is updated once a day, and a live demo is available 🌐 [here](https://tintinweb.github.io/smart-contract-vulndb/
+An open dataset of publicly available smart contract issues aggregated from various audit reports. The dataset can be accessed at 🌻 [vulns.json](dataset/vulns.json), is updated once a day, and a live demo is available 🌐 [here](https://tintinweb.github.io/smart-contract-vulndb/
 ).
 
 <sup>
@@ -15,7 +15,7 @@ LMK if you're building cool things with this dataset and I'll list them here �
 
 ## 🔸 DataSet
 
-[<img width="760" alt="image" src="https://github.com/tintinweb/smart-contract-vulndb/assets/2865694/1b33870e-4201-43c9-b967-cf82498b5b48">](https://github.com/tintinweb/smart-contract-vulndb/blob/main/public/cache/vulns.json)
+[<img width="760" alt="image" src="https://github.com/tintinweb/smart-contract-vulndb/assets/2865694/1b33870e-4201-43c9-b967-cf82498b5b48">](https://github.com/tintinweb/smart-contract-vulndb/blob/main/dataset/vulns.json)
 
 
 ```typescript
@@ -31,7 +31,7 @@ const issue: Issue = {
 };
 ```
 
-* [vulns.json](public/cache/vulns.json)
+* [vulns.json](dataset/vulns.json)
 
 ## 🔸 Live Demo 
 
