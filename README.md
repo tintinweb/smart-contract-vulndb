@@ -9,12 +9,27 @@
 An open dataset of publicly available smart contract issues aggregated from various audit reports. The dataset can be accessed at 🌻 [vulns.json](public/cache/vulns.json), is updated once a day, and a live demo is available 🌐 [here](https://tintinweb.github.io/smart-contract-vulndb/
 ).
 
+<sup>
+LMK if you're building cool things with this dataset and I'll list them here 😊🙏
+</sup>
+
 ## 🔸 DataSet
-
-
 
 [<img width="760" alt="image" src="https://github.com/tintinweb/smart-contract-vulndb/assets/2865694/1b33870e-4201-43c9-b967-cf82498b5b48">](https://github.com/tintinweb/smart-contract-vulndb/blob/main/public/cache/vulns.json)
 
+
+```typescript
+const issue: Issue = {
+  title: "<string:title>",
+  severity: Severity.Medium,
+  body: "<markdown-string:description>",
+  dataSource: {
+    name: "<string:path-like-report-identifier>",
+    repo: "<string:git-or-http-url>",
+    url: "<string:url>"
+  }
+};
+```
 
 * [vulns.json](public/cache/vulns.json)
 
@@ -25,8 +40,6 @@ An open dataset of publicly available smart contract issues aggregated from vari
 * [Demo](https://tintinweb.github.io/smart-contract-vulndb/)
 
 ## 🔸 Accessing the Latest Snapshot
-
-
 
 - Shell
 ```
@@ -47,6 +60,10 @@ fetch('[https://api.example.com/data](https://tintinweb.github.io/smart-contract
     console.error('Error:', error);
   });
 ```
+
+- [NodeJs](./examples/javascript/example.js)
+- [TypeScript](./examples/typescript/example.ts)
+- [Python](./examples/python/example.py)
 
 ## 🤓 For Nerds 
 
