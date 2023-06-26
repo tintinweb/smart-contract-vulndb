@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "cp ./dataset/vulns.json ./public/cache/vulns.json && next build",
+    "build": "next build",
+    "postbuild": "cp dataset/vulns.json public/cache/vulns.json",
     "start": "next start",
     "lint": "next lint"
   },
