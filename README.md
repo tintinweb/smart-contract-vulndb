@@ -48,7 +48,7 @@ const issue: Issue = {
 
 - JavaScript
 ```javascript
-fetch('[https://api.example.com/data](https://tintinweb.github.io/smart-contract-vulndb/cache/vulns.json)')
+fetch('https://tintinweb.github.io/smart-contract-vulndb/cache/vulns.json')
   .then(response => response.text())
   .then(data => {
     // Process the retrieved data
