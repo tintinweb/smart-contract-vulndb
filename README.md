@@ -77,3 +77,20 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## 🎓 Citation
+
+If you are using this dataset in your research and paper, here's how you can cite this dataset: 
+
+- APA6
+```
+Ortner, M. (n.d.). Smart Contract VulnDB. Retrieved from https://github.com/tintinweb/smart-contract-vulndb.
+```
+
+- LateX (Bib)
+```
+ @article{smart_contract_vulndb, 
+          title={Smart Contract VulnDB}, 
+          url={https://github.com/tintinweb/smart-contract-vulndb}, 
+          author={Ortner, Martin}} 
+ ```
+
