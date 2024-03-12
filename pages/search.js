@@ -70,21 +70,29 @@ const Search = () => {
     const [totalIssues, setTotalIssues] = useState('');
 
     const getInitialProps = async (ctx) => {
-
-        const all = await (await fetch('./cache/vulns.json')).text();
-
         const all_issues = []
-        for(let line of all.split("\n")){
-            if(line.trim().length == 0){
-                continue;
-            } 
-            try{
-                all_issues.push(JSON.parse(line))
-            } catch(e){
-                console.log(line)
-                throw e
+
+        for(let idx=1; idx<10; idx++){
+            try {
+                const all = await (await fetch(`./cache/vulns-${idx}.json`)).text();
+
+                for(let line of all.split("\n")){
+                    if(line.trim().length == 0){
+                        continue;
+                    } 
+                    try{
+                        all_issues.push(JSON.parse(line))
+                    } catch(e){
+                        console.log(line)
+                        throw e
+                    }
+                }
+            } catch (e){
+                console.log(e)
+                break;
             }
         }
+        
 
         return {
             all: all_issues
