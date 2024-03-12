@@ -15,6 +15,10 @@ LMK if you're building cool things with this dataset and I'll list them here �
 
 ## 🔸 DataSet
 
+⚠️ NOTE: Breaking Change due to [GIT Large File Policy](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github#file-size-limits)
+Switching from one big `vulns.json` to files a 25k issues `vulns-1.json`, `vulns-2.json`, ...
+
+
 [<img width="760" alt="image" src="https://github.com/tintinweb/smart-contract-vulndb/assets/2865694/1b33870e-4201-43c9-b967-cf82498b5b48">](https://github.com/tintinweb/smart-contract-vulndb/blob/main/dataset/vulns.json)
 
 
@@ -31,7 +35,10 @@ const issue: Issue = {
 };
 ```
 
-* [vulns.json](dataset/vulns.json)
+To work around [GitHub File Size Limits](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github#file-size-limits) we'll split the database into equal files of 25k issues
+
+* [vulns-1.json](dataset/vulns-1.json) - a 25k issues
+* [vulns-2.json](dataset/vulns-2.json)
 
 ## 🔸 Live Demo 
 
@@ -43,22 +50,57 @@ const issue: Issue = {
 
 - Shell
 ```
-⇒  curl https://tintinweb.github.io/smart-contract-vulndb/cache/vulns.json
+⇒  curl https://tintinweb.github.io/smart-contract-vulndb/cache/vulns-1.json
+⇒  curl https://tintinweb.github.io/smart-contract-vulndb/cache/vulns-2.json
 ```
 
 - JavaScript
 ```javascript
-fetch('https://tintinweb.github.io/smart-contract-vulndb/cache/vulns.json')
-  .then(response => response.text())
-  .then(data => {
-    // Process the retrieved data
-    const issues = data.split('\n').filter(l => l.trim().length > 0).map(l => JSON.parse(l))
-    console.log(issues);
-  })
-  .catch(error => {
-    // Handle any errors that occurred during the request
-    console.error('Error:', error);
-  });
+const all_issues = []
+for(let idx=1; idx<10; idx++){
+  try {
+    const all = await (await fetch(`https://tintinweb.github.io/smart-contract-vulndb/cache/vulns-${idx}.json`)).text();
+    for(let line of all.split("\n")){
+      if(line.trim().length == 0){
+        continue;
+      } 
+      try{
+        all_issues.push(JSON.parse(line))
+      } catch(e){
+        console.log(line)
+        throw e
+      }
+    }
+} catch (e){
+    console.log(e)
+    break;
+  }
+}
+```
+
+- JavaScript Local
+```javascript
+const fs = require("fs")
+let issues = [];
+for(let idx=1; idx<10; idx++){
+  if(!fs.existsSync(`./dataset/vulns-${idx}.json`)) {
+    break;
+  }
+  const data = fs.readFileSync(`./dataset/vulns-${idx}.json`, "utf-8");
+  const part = data.split('\n').filter(l => l.trim().length > 0).map(l => JSON.parse(l))
+  issues = [...issues, ...part]
+}
+console.log(issues.length)
+// 39125
+[... new Set(issues.map(i => i.severity))]
+/*
+[
+  'medium',   'minor',
+  null,       'major',
+  'critical', undefined,
+  'info'
+]
+*/
 ```
 
 - [NodeJs](./examples/javascript/example.js)

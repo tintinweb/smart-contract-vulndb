@@ -1,11 +1,11 @@
 {
   "name": "smart-contract-vulnerability-db",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "cp dataset/vulns.json public/cache/vulns.json",
+    "postbuild": "cp dataset/vulns*.json public/cache/",
     "start": "next start",
     "lint": "next lint"
   },
